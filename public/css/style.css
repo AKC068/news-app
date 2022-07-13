@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgba(245, 238, 238, 0.89);
+}
+
+.container-fluid{
+    background-image:linear-gradient(rgba(7, 6, 6, 0.336),rgba(7, 6, 6, 0.288)),url('/assests/bg1.jpg');
+    background-size: cover; 
+    background-position: center;
+    height: 45vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+    font-weight: 700;
+    font-size: 5rem; 
+    font-family: 'Patua One', cursive;
+    color: white;
+    font-weight: bold;
+}
+
+
+.heading:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    background: rgba(0, 0, 0, 0.897);
+}
+.navbar-nav .nav-item {
+    margin: 1rem;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon{
+    color: white;
+    border: none;
+}
+
+.btn{
+    background-color: #2D4263;
+    color: white;
+    border: 2px solid #2D4263;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #2D4263;
+    border: 2px solid #2D4263;
+}
+
+
+@media only screen and (min-width: 769px){
+    .navbar .navbar-nav .nav-item>.nav-link:hover {
+        color: rgb(247, 232, 232);
+        transition: 0.35s;
+    }
+    .navbar .navbar-nav .nav-link::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: rgb(247, 232, 232);
+        transition:all 0.35s ease;
+    }
+    
+    .navbar .navbar-nav .nav-link:hover::after{
+        width: 100%;
+        transition:all 0.35s ease;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .navbar-nav .nav-item {
+        margin:0.1rem;
+    }
+
+    .heading
+    {
+        font-size: 3rem; 
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .navbar-nav .nav-item {
+        margin: 0.1rem;
+    }
+     .heading
+    {
+        font-size: 2rem; 
+    }
+}
+
+img{
+    max-width: 100%;
+    transition: all 0.7s ;
+}
+
+.Hover-effect:hover{
+    transform:  translateY(-3px) scale(1.01);
+
+}
+.Hover-effect:hover img{
+    transform:  translateY(-5px) scale(1.02);
+}
+h3{
+    font-size: 1.55rem;
+}
+h2{
+    font-size: 1.55rem;
+}
+.news-container{
+    margin-bottom: 69px;
+    padding: 0 1rem;
+    padding-top: 92px;
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 2rem;
+
+}
+.news-box{
+    transition: all 0.3s ;
+    text-decoration: none;
+    color: rgb(29, 25, 25);
+    background-color: white;
+    padding: 20px;
+}
+
+.news-box:hover{
+    text-decoration: none;
+    color: rgb(29, 25, 25);;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
+    border: 2px solid #2D4263;
+}
+
+
+.searc-bar{
+    justify-content: center;
+}
+
+.Hover-effect {
+    position: relative;
+}
+
+.Hover-effect::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+
+
+.Hover-effect:hover::after {
+    transform: scale(1, 1);
+}
+
